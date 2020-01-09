@@ -1,0 +1,431 @@
+/* Normalise elements borrowed from https://github.com/stephband/bolt/blob/master/css/html.css*/
+
+html, body, div, span,
+object, iframe, canvas, img, svg, audio, video, track, math,
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre,
+a, abbr, address, code, time,
+br, del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, dialog, figure, figcaption, footer, header,
+nav, main, section, summary,
+form, fieldset, label, legend, input, output, button, select, textarea,
+progress, meter,
+::before, ::after {
+    /* Here's what makes Bolt a little different. Border box.
+       It'a a breath of fresh air to work with. */
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+
+    /* Set the dimensions of backgrounds to the limits of the
+       padding box. */
+    -webkit-background-origin: padding-box;
+       -moz-background-origin: padding;
+            background-origin: padding-box;
+
+    /* Default to backgrounds that don't repeat. */
+    background-repeat: no-repeat;
+}
+
+
+/*non-borrrowed part starts here*/
+
+
+* {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+
+/*this makes the footer stick to the bottom of the page.*/
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.text-small{
+    font-size: 14px;
+}
+
+body {
+    font-size: 20px;
+    margin: 0 0 100px;
+    font-family: 'Source sans pro', sans-serif;
+    background-color: #000;
+
+}
+
+span{
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+header h1,
+header h1:visited {
+    font-size: 50px;
+    color: #fff;;
+    margin-top: 42px;
+}
+
+
+
+.container{
+    margin: 0 auto;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    display: block;
+}
+header{
+    margin-bottom: 40px;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    display: flex;
+}
+
+header a{
+    margin: auto;
+    text-align: center;
+}
+
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-right: 15vw;
+    padding-left: 15vw;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    height: 60px;
+    background-color: #000;
+
+}
+
+/* contact form */
+
+main form{
+    width: 360px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"]{
+    height: 40px;
+    transition: height 0.5s ease-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus{
+    height: 50px;
+    transition: height 0.5s ease-out;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, .1);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+    transition: height 0.5s ease-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background: #d2d9dd;
+    transition: height 0.5s ease-out;
+}
+
+textarea{
+    height: 115px;
+
+}
+
+textarea:focus {
+    background: #d2d9dd;
+    max-height: 200px;
+    height: 200px;
+}
+
+.submit-button {
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background-color: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 200px;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.submit-button:hover{
+    cursor: pointer;
+    background-color: #2dcdad;
+}
+
+/* Contact form end*/
+
+/* fonts awesome icons */
+
+.unsocial-icons {
+    width: 155px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.unsocial-icons>* {
+    display: flex;
+    min-width: 30px;
+    height: 30px;
+    background-color: #f4f7f8;
+    border-radius: 50%;
+}
+
+.unsocial-icons>*:focus {
+    border: none;
+}
+
+.unsocial-icons>*>* {
+    margin: auto;
+    color: #1abc9c;
+
+}
+
+
+/* unsocial icons message box */
+.message-box {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    width: 85%; /* so that we can have 15% distance to the right end*/
+    overflow: hidden;
+    height: 40px;
+    text-align: right;
+    visibility: hidden;
+    z-index: 1;
+}
+
+/*for opacity animation by js*/
+#msg-box{
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+.message-box p {
+    line-height: 14px;
+    font-size: 16px;
+}
+
+
+small {
+    margin-top: -7px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px; /*align the top to the bootstrap icons*/
+}
+
+nav{
+    position: relative;
+}
+
+.nav-item-vertical{
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    transition: margin .2s;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.nav-item-horizontal{
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    transition: margin .2s;
+    margin-top: 0;
+    z-index: 1;
+    width: 100px;
+}
+.main{
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 120px;
+    width: calc(100% - 140px);
+    border: 1px solid white;
+    transition: transform .3s;
+    min-height: 300px;
+    padding: 10px;
+}
+
+.main > ul{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: max-content;
+    line-height: 100px;
+    margin-top: 40px;
+    padding:0;
+}
+.nav-item-vertical:hover{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.main li:hover,
+nav li:hover,
+nav li:focus{
+    background-color: white;
+    color: black;
+}
+
+.main a,
+nav a {
+    color: #fff;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+}
+
+.fade-enter-active{
+  transition: opacity .5s;
+  margin-top: -100px;
+  z-index: -1;
+}
+
+.main-enter-active{
+  transform: translateX(100%);
+  left: 50%;
+}
+
+.main-leave-active{
+  transition: transform .3s;
+  transform: translateX(100%);
+  left: 50%;
+}
+
+.contact-enter-active{
+    transition: opacity 1s;
+}
+
+.main a:hover,
+nav li:hover,
+nav a:hover{
+    color: #000;
+    outline-width: 0;
+}
+.main a,
+nav li:focus,
+nav a:focus{
+    outline-width: 0;
+}
+
+
+li + li{
+    margin-top: 1px;
+}
+
+nav {
+    width: 100px;
+}
+
+nav ul{
+    padding: 0;
+}
+
+
+nav li{
+    border: 1px solid #fff;
+    border-right: none;
+    transition: background-color 0.1s ease;
+    width: 100px;
+    font-size: 14px;
+    height: 100px;
+}
+
+
+
+@media only screen and (min-width: 962px) {
+    nav {
+        width: 100px;
+        height: max-content;
+
+    }
+    .main{
+        padding: 50px;
+    }
+}
+
+@media only screen and (min-width: 1130px) {
+    .container{
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+
+    .img-container img:hover{
+        transition: opacity .3s linear;
+        opacity: 0.1;
+    }
+
+    header,
+    footer{
+        padding-left: 15vw;
+        padding-right: 15vw;
+        /*! justify-content: center; */
+    }
+}

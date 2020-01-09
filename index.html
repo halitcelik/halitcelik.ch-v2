@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="your, tags" />
+    <meta name="description" content="A portfolio about Halit Celik to be used for the submission of EPFL extension School course final project." />
+    <meta name="subject" content="Personal portfolio exercise">
+    <meta name="author" content="Halit Celik, halitcelik@live.com">
+    <meta name="url" content="https://www.halitcelik.ch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Home - Halit Celik</title>
+</head>
+
+<body id="body">
+    <div id="app">
+        <header>
+            <a href="/" title="logo">
+                <h1>HALIT ÇELIK
+                    <br>
+                    <span class="text-small">Newbee web developer</span></h1>
+            </a>
+        </header>
+        <div id="msg-box" class="message-box">
+            <p id="msg-text" class="message-text"></p>
+        </div>
+        <transition-group name="main">
+            <div class="main" v-bind:key="1" v-if="bio">
+                <p>I like talking about myself. I like talking about others as well. Coz I like talking. In Turkish, English, French and Spanish. Turkish is the one that I am fluent the most, for obvious reasons. </p>
+                <p> I lived my childhood in hot streets and on some trees around my house. Then started moving west in 2009. And step by step arrived in Lausanne in 2016.</p>
+                <p>Now I am doing an internship at Cruncher Web Agency in Lausanne and at the same time doing some of EPFL Extension School Courses</p>
+            </div>
+            <div class="main" v-bind:key="2" v-if="works">
+                Here are some content works
+            </div>
+            <div class="main" v-bind:key="3" v-if="contact">
+                <transition-group name="contact" tag="ul">
+                    <li v-bind:key="1" class="nav-item-horizontal"><a href="https://t.me/allusernamesaretaken2" target="_blank">Telegram</a></li>
+                    <li v-bind:key="2" class="nav-item-horizontal"><a href="">two work</a></li>
+                    <li v-bind:key="3" class="nav-item-horizontal"><a href="">three work</a></li>
+                    <li v-bind:key="4" class="nav-item-horizontal"><a href="">four work</a></li>
+                </transition-group>
+            </div>
+        </transition-group>
+        <nav>
+            <transition-group name="fade" tag="ul">
+                <li v-bind:key="1" v-show="navItem > 0" v-on:click="toggle('works')" class="nav-item-vertical"><a href="/works.html" onclick="return false;">Works</a></li>
+                <li v-bind:key="2" v-show="navItem > 1" v-on:click="toggle('bio')" class="nav-item-vertical"><a href="/bio.html" onclick="return false;">Biography</a></li>
+                <li v-bind:key="3" v-show="navItem > 2" v-on:click="toggle('contact')" class="nav-item-vertical"><a href="/contact.html" onclick="return false;">Contact</a></li>
+            </transition-group>
+        </nav>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
