@@ -28,7 +28,6 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue!',
         navItem: 0,
         bio: false,
         works: false,
@@ -39,7 +38,7 @@ var app = new Vue({
             var vm = this;
             setTimeout(function() {
                 vm.navItem += 1;
-                if (--i) vm.loopAnimation(i);
+                if (--i) { vm.loopAnimation(i) };
             }, 500)
         },
         toggle: function(event) {
@@ -57,6 +56,7 @@ var app = new Vue({
                 this.works = false;
                 this.contact = true;
             }
+            return false;
         }
     },
     mounted: function() {

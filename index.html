@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Home - Halit Celik</title>
 </head>
 
@@ -35,22 +35,21 @@
                 <p>Now I am doing an internship at Cruncher Web Agency in Lausanne and at the same time doing some of EPFL Extension School Courses</p>
             </div>
             <div class="main" v-bind:key="2" v-if="works">
-                Here are some content works
+                I will upload them soon
             </div>
             <div class="main" v-bind:key="3" v-if="contact">
                 <transition-group name="contact" tag="ul">
                     <li v-bind:key="1" class="nav-item-horizontal"><a href="https://t.me/allusernamesaretaken2" target="_blank">Telegram</a></li>
-                    <li v-bind:key="2" class="nav-item-horizontal"><a href="">two work</a></li>
-                    <li v-bind:key="3" class="nav-item-horizontal"><a href="">three work</a></li>
-                    <li v-bind:key="4" class="nav-item-horizontal"><a href="">four work</a></li>
+                    <li v-bind:key="2" class="nav-item-horizontal"><a href="mailto:halitcelik@live.com" target="_top">Send Email</a></li>
+                    <li v-bind:key="3" class="nav-item-horizontal"><a href="https://github.com/halitcelik" target="_blank">Github</a></li>
                 </transition-group>
             </div>
         </transition-group>
         <nav>
             <transition-group name="fade" tag="ul">
-                <li v-bind:key="1" v-show="navItem > 0" v-on:click="toggle('works')" class="nav-item-vertical"><a href="/works.html" onclick="return false;">Works</a></li>
-                <li v-bind:key="2" v-show="navItem > 1" v-on:click="toggle('bio')" class="nav-item-vertical"><a href="/bio.html" onclick="return false;">Biography</a></li>
-                <li v-bind:key="3" v-show="navItem > 2" v-on:click="toggle('contact')" class="nav-item-vertical"><a href="/contact.html" onclick="return false;">Contact</a></li>
+                <li v-bind:key="1" v-show="navItem > 0" v-on:click="toggle('works')" class="nav-item-vertical"><a href="#" onclick="return false;">Works</a></li>
+                <li v-bind:key="2" v-show="navItem > 1" v-on:click="toggle('bio')" class="nav-item-vertical"><a href="#" onclick="return false;">Biography</a></li>
+                <li v-bind:key="3" v-show="navItem > 2" v-on:click="toggle('contact')" class="nav-item-vertical"><a href="#">Contact</a></li>
             </transition-group>
         </nav>
     </div>
